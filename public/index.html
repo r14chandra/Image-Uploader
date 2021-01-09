@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Image-Uploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet" media="screen">
+    <link href="./css/mobile-style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="./favicon.png">
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+
+</head>
+
+<body style="background-color: black">
+
+    <div class="title">
+        <h1 style="color: cyan">Profile Picture Image Uploader</h1>
+        <p style="color: cyan"><b>Select and Upload Image to get its URL</p>
+    </div>
+
+    <div class="dropzone">
+        <img id="myimg">
+    </div>
+
+    <div class="info">
+        <p><input id="name" type="text" placeholder="Enter Image Name"> <label id="progress"></label></p>
+
+        <p style="color: cyan">Click here to select image: <button id="select">Browse</button><br>
+
+           <button id="upload">Upload</button> 
+           <button id="retrieve">Get URL</button><br><br>
+           <label id="getID"></label>
+            <div class="tooltip">
+              <button id="copy"  onclick="after()"> 
+                <span class="tooltiptext" id="myTooltip"> Copy to Clipboard </span>
+                Copy
+            </button>  
+           </div>
+            
+        </p>
+    </div>
+
+    <script type="text/javascript" src="./js/upload.js"></script>
+</body>
+
+</html>
